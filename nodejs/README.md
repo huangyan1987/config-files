@@ -15,19 +15,16 @@
 - [fixpack](https://www.npmjs.com/package/fixpack) - Sort package.json
 - [get-changelog-cli](https://www.npmjs.com/package/get-changelog-cli) - Find module changelogs
 - [http-server](https://www.npmjs.com/package/http-server) - Local HTTP server
-  - `hs --cors`
+  - `http-server --cors`
 - [imagemin-cli](https://www.npmjs.com/package/imagemin-cli) - Image minifier
 - [npm-check-updates](https://www.npmjs.com/package/npm-check-updates) - Upgrade package.json dependencies
 - [ntl](https://www.npmjs.com/package/ntl) - List and run npm tasks
 - [release-it](https://www.npmjs.com/package/release-it) - Automate versioning and package publishing tasks.
   - [@release-it/keep-a-changelog](https://github.com/release-it/keep-a-changelog) - Keep a Changelog plugin
-- [@squoosh/cli](https://www.npmjs.com/package/@squoosh/cli) - Image converter (especially AVIF)
 
+```bash
+npm install -g alex cloc evaluatory fixpack get-changelog-cli http-server imagemin-cli npm-check-updates ntl release-it @release-it/keep-a-changelog
 ```
-yarn global add alex cloc evaluatory fixpack get-changelog-cli http-server imagemin-cli npm-check-updates ntl release-it @release-it/keep-a-changelog @squoosh/cli
-```
-
-- With npm: `npm install -g`
 
 ## Other packages
 
@@ -52,23 +49,17 @@ npm config set progress false
 npm config set save-exact true
 ```
 
-## yarn settings
-
-```bash
-yarn config set no-progress
-yarn config set yarn-offline-mirror ~/AppData/Roaming/yarn-offline
-yarn config set yarn-offline-mirror-pruning true
-```
-
 ## n - version manager
 
 - [n](https://github.com/tj/n)
 - [n-install](https://github.com/mklement0/n-install)
 
-Install:
-
 ```bash
+# Install
 curl -L https://git.io/n-install | bash
+
+# Update
+n-update
 ```
 
 Commands:
@@ -121,17 +112,6 @@ pm2 set pm2-logrotate:workerInterval 3600
 
 - Installation on [Windows](https://github.com/nodejs/node-gyp#on-windows)
 
-
-## create-react-app
-
-- [Advanced Configuration](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#advanced-configuration)
-- `.env` file:
-
-```
-PORT=12345
-GENERATE_SOURCEMAP=false
-PUBLIC_URL=.               # Build as a local project/file
-```
 
 ## Semantic Versioning
 

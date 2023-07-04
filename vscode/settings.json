@@ -46,6 +46,7 @@
     "*.reg": "ini",
     "*.todo": "markdown",
     "*.todo.txt": "markdown",
+    "*.webc": "html",
     ".aliases": "shellscript",
     ".prettierrc": "yaml"
   },
@@ -53,6 +54,7 @@
   // Git
 
   "git.enableSmartCommit": true,
+  "git.openRepositoryInParentFolders": "always",
 
   // npm
 

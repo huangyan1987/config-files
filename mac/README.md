@@ -4,7 +4,7 @@ Run `./config.sh` to initialize custom settings.
 
 ## Settings
 
-- Scale display
+- Scale display (if necessary)
   - System Preferences → Displays → Scaled
 - Switch Function Keys
   - ☑ System Preferences → Keyboard → Use F1, F2, etc. keys as standard function keys
@@ -21,14 +21,18 @@ Run `./config.sh` to initialize custom settings.
 - Disable thesaurus:
   - ☐ System Preferences → Trackpad → Look up & data detectors
 - Make modal buttons toggable
-  - ☑ System Preferences → Keyboard → Shortcuts → Full Keyboard Access → All Controls
-- Enable natural text selection
-  - iTerm2 → Preferences → Profiles → Keys → Load Preset... → Natural Text Editing
+  - ☑ System Preferences → Keyboard → Shortcuts → Use keyboard navigation to move focus between controls
 - Correct .ssh folder permissions: `chmod -R u+xr,go-rwx ~/.ssh`
 - Save screenshots [immediately](https://osxdaily.com/2019/08/02/disable-screenshot-thumbnail-preview-mac/)
   - ☐ Screenshot (App) → Options → Show Floating Thumbnail
-- Turn off Power Nap to save energy:
-  - ☐ System Preferences → Battery → Power Adapter → Enable Power Nap
+- Drag'n'drop home folder to Finder Favourites
+- Align icons on desktop
+  - Right click desktop → Sort By → Snap to Grid
+- Disable character viewer on `Fn` click
+  - Preferences → Keyboard → Press 🌐 to `Do Nothing`
+- Disable hot corners:
+  - Preferences → Desktop & Screen Saver → Screen Saver → Hot Corners
+
 
 ## Features
 
@@ -48,6 +52,7 @@ Run `./config.sh` to initialize custom settings.
 | Ctrl + Alt + Right | Move window to right half (Rectangle) |
 | Ctrl + Alt + Up    | Maximize window (Rectangle)           |
 | Ctrl + Alt + Left  | Restore window (Rectangle)            |
+| Cmd + Shift + 4    | Screenshot ("Space" to select window) |
 
 ## Transition from Windows
 
@@ -65,24 +70,44 @@ mdls -name kMDItemCFBundleIdentifier -r SomeApp.app
 
 https://stackoverflow.com/questions/39464668/how-to-get-bundle-id-of-mac-application
 
+## Open apps that Apple can't check
+
+To ignore the "Malicious software" warning:
+
+- Control-click the app icon.
+- Choose Open from the shortcut menu.
+- Click Open.
+
+https://support.apple.com/en-gb/guide/mac-help/mchleab3a043/mac
+
+## Open Chrome with a certain URL
+
+```
+open -a "Google Chrome" https://example.com https://example.net
+```
+
+https://superuser.com/questions/716943/how-can-i-open-chrome-from-the-command-line-with-specific-pages-in-tabs-in-mac-o
+
+
 ## Apps
 
-- [Install](https://www.ics.uci.edu/~pattis/common/handouts/macmingweclipse/allexperimental/macxcodecommandlinetools.html) XCode Command Line Tools: `xcode-select --install`
 - [Homebrew](https://brew.sh/)
+  - [XCode Command Line Tools](https://mac.install.guide/commandlinetools/index.html) will be installed as part of Homebrew installation.
 - [Alfred](https://www.alfredapp.com/)
-- [iHosts](https://apps.apple.com/us/app/ihosts-etc-hosts-editor/id1102004240) - Switch hosts via GUI
 - [iTerm2](https://www.iterm2.com/downloads.html)
-- [qView](https://interversehq.com/qview/)
-- [Rectangle](https://github.com/rxhanson/Rectangle)
 - [RetinaCapture](https://www.retinacapture.com/)
+- [Visual Studio Code](https://code.visualstudio.com/Download)
+
+No longer needed:
+
 - [Sensible Side Buttons](https://sensible-side-buttons.archagon.net/) - Support for additional mouse buttons
 - [TextMate](https://macromates.com/)
-- [Visual Studio Code](https://code.visualstudio.com/Download)
 
 ### Homebrew
 
 - Run `setup.sh` to install common apps
-- [Install fonts with homebrew](https://changelog.com/posts/you-can-install-fonts-with-homebrew)
+  - [qView](https://interversehq.com/qview/)
+  - [Install fonts with homebrew](https://changelog.com/posts/you-can-install-fonts-with-homebrew)
 
 ```
 brew search font-
@@ -97,6 +122,9 @@ brew install --cask font-aldrich
 - [iTerm integration](https://github.com/vitorgalvao/custom-alfred-iterm-scripts)
 - [Alfred Fakeum](https://github.com/deanishe/alfred-fakeum)
   - Change workflow snippet key to `xxfake` and remove `\\` prefix
+- [Remove Spotlight shortcuts](https://www.alfredapp.com/help/troubleshooting/cmd-space/) to assign `Cmd` + `Space`
+- Preferences → Default Results → Setup fallback results
+- ☑ Preferences → Clipboard History → Keep plain text / images history
 
 ### AltTab
 
